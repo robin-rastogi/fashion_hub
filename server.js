@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url';
 
 
 import mongoose from 'mongoose';
-const DB='mongodb+srv://roni:rohit123@cluster0.ds1jl9v.mongodb.net/Ecommerce?retryWrites=true&w=majority'
+const DB=process.env.DB
 mongoose.connect(DB).then(()=>{
      console.log('MongoDB connected successful');
 }).catch((err)=>{
